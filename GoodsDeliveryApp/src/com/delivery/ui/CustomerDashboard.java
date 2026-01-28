@@ -57,7 +57,6 @@ public class CustomerDashboard extends JFrame {
         topPanel.add(rightTop, BorderLayout.EAST);
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
-        /* ================= CENTER ================= */
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
         centerPanel.setBackground(Color.WHITE);
@@ -79,7 +78,7 @@ public class CustomerDashboard extends JFrame {
         centerPanel.add(productScroll);
         centerPanel.add(Box.createVerticalStrut(20));
 
-        /* ================= DELIVERY DETAILS ================= */
+       
         JLabel deliveryLabel = new JLabel("Delivery Details");
         deliveryLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
         centerPanel.add(deliveryLabel);
@@ -107,7 +106,7 @@ public class CustomerDashboard extends JFrame {
         centerPanel.add(deliveryPanel);
         centerPanel.add(Box.createVerticalStrut(25));
 
-        /* ================= CONFIRM BUTTON ================= */
+       
         JButton confirmBtn = new JButton("Confirm to place order");
         confirmBtn.setAlignmentX(Component.CENTER_ALIGNMENT);
         confirmBtn.setBackground(new Color(52, 120, 246));
@@ -120,7 +119,7 @@ public class CustomerDashboard extends JFrame {
         add(mainPanel);
     }
 
-    /* ================= LOAD PRODUCTS ================= */
+  
     private void loadProductsFromDatabase() {
         List<Product> products = ProductDAO.getAllProducts();
         for (Product p : products) {
@@ -128,7 +127,7 @@ public class CustomerDashboard extends JFrame {
         }
     }
 
-    /* ================= PRODUCT CARD ================= */
+    
     private JPanel createProductCard(Product product) {
 
         JPanel card = new JPanel(new BorderLayout(10, 10));
@@ -176,7 +175,7 @@ public class CustomerDashboard extends JFrame {
         return card;
     }
 
-    /* ================= PLACE ORDER ================= */
+    
     private void placeOrder() {
 
         Date selectedDate = (Date) dateSpinner.getValue();
@@ -298,7 +297,7 @@ public class CustomerDashboard extends JFrame {
         }
     }
 
-    /* ================= RESET DASHBOARD ================= */
+   
     private void resetDashboard() {
 
         dateSpinner.setValue(new Date());
