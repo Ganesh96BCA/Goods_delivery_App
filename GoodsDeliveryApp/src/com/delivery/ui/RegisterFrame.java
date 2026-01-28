@@ -28,7 +28,7 @@ public class RegisterFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        /* ================= TOP PANEL (BACK BUTTON) ================= */
+        
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         topPanel.setBackground(new Color(245, 247, 249));
@@ -43,7 +43,7 @@ public class RegisterFrame extends JFrame {
         topPanel.add(backBtn, BorderLayout.EAST);
         add(topPanel, BorderLayout.NORTH);
 
-        /* ================= MAIN PANEL ================= */
+       
         JPanel mainPanel = new JPanel();
         mainPanel.setBackground(new Color(245, 247, 249));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(25, 35, 25, 35));

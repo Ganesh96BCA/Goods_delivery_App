@@ -318,5 +318,6 @@ public class CustomerDashboard extends JFrame {
 
         productsPanel.revalidate();
         productsPanel.repaint();
+       
     }
 }
