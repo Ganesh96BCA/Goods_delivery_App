@@ -29,7 +29,7 @@ public class CustomerDashboard extends JFrame {
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 30));
         mainPanel.setBackground(Color.WHITE);
 
-        /* ================= TOP BAR ================= */
+        
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBackground(Color.WHITE);
 
