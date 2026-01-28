@@ -25,7 +25,6 @@ public class DriverDashboard extends JFrame {
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 25, 20, 25));
         mainPanel.setBackground(new Color(245, 246, 248));
 
-        /* ================= TOP BAR ================= */
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBackground(new Color(245, 246, 248));
 
@@ -43,7 +42,6 @@ public class DriverDashboard extends JFrame {
 
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
-        /* ================= CENTER ================= */
         JPanel centerPanel = new JPanel(new GridLayout(1, 2, 20, 0));
         centerPanel.setBackground(new Color(245, 246, 248));
 
@@ -59,7 +57,6 @@ public class DriverDashboard extends JFrame {
         loadMissionsFromDatabase();
     }
 
-    /* ================= LOAD MISSIONS ================= */
     private void loadMissionsFromDatabase() {
 
         assignedPanel.removeAll();
@@ -125,7 +122,6 @@ public class DriverDashboard extends JFrame {
         }
     }
 
-    /* ================= MISSION CARD ================= */
     private JPanel createMissionCard(
             String missionNo,
             String pickup,
@@ -185,7 +181,6 @@ public class DriverDashboard extends JFrame {
         return card;
     }
 
-    /* ================= MARK COMPLETED ================= */
     private void markAsCompleted(int orderId) {
 
         try (Connection con = DBConnection.getConnection()) {
@@ -209,7 +204,6 @@ public class DriverDashboard extends JFrame {
         }
     }
 
-    /* ================= SECTION PANEL ================= */
     private JPanel createSectionPanel(String titleText) {
 
         JPanel panel = new JPanel();

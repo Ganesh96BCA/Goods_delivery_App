@@ -71,7 +71,7 @@ public class SchedulerDashboard extends JFrame {
         JPanel main = new JPanel(new BorderLayout(15, 15));
         main.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        /* ================= TOP BAR ================= */
+
 
         JPanel topBar = new JPanel(new BorderLayout(10, 10));
 
@@ -105,7 +105,7 @@ public class SchedulerDashboard extends JFrame {
 
         main.add(topBar, BorderLayout.NORTH);
 
-        /* ================= CENTER ================= */
+
 
         JPanel center = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -294,7 +294,7 @@ public class SchedulerDashboard extends JFrame {
             return;
         }
 
-        // ✅ MOVE order (not copy)
+      
         allOrdersModel.removeElement(item);
         selectedOrdersModel.addElement(item);
 
@@ -307,7 +307,7 @@ public class SchedulerDashboard extends JFrame {
         OrderItem item = selectedOrdersList.getSelectedValue();
         if (item == null) return;
 
-        // ✅ MOVE order back
+     
         selectedOrdersModel.removeElement(item);
         allOrdersModel.addElement(item);
 
@@ -389,7 +389,6 @@ public class SchedulerDashboard extends JFrame {
 
             ResultSet rs = ps.executeQuery();
 
-            // ✅ Check if data exists
             if (!rs.isBeforeFirst()) {
                 JOptionPane.showMessageDialog(
                     this,
@@ -427,7 +426,7 @@ public class SchedulerDashboard extends JFrame {
                 if (!driver.equals(currentDriver)) {
 
                     currentDriver = driver;
-                    slNo = 1; // ✅ RESET SL NO PER DRIVER
+                    slNo = 1; 
 
                     XWPFParagraph driverPara = doc.createParagraph();
                     XWPFRun driverRun = driverPara.createRun();
